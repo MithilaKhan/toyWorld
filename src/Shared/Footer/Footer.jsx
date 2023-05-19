@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
    return (
       <footer >
-         <div className="footer  p-10 bg-rose-50 text-base-content" >
+         <div className="footer  p-10 bg-rose-200 text-base-content" >
          <div>
       <a className="h-16  w-16 rounded-full avatar mx-auto">
     <img src="https://th.bing.com/th/id/R.732c933c2d46acd27a1d41f18b8a00f9?rik=X8eMBAEYZ%2fVRHQ&pid=ImgRaw&r=0" className='rounded-full ' />
@@ -34,7 +34,7 @@ const Footer = () => {
          </div>
      
       
-  <div className="footer footer-center p-6 font-semibold text-xl bg-rose-100 text-base-content">
+  <div className="footer footer-center p-6 font-semibold text-xl bg-rose-300 text-base-content">
     <p>Copyright © 2023 - All right reserved by ToyWorld Industries Ltd</p>
   </div>
 

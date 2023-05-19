@@ -1,9 +1,55 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
+import {  GoogleAuthProvider, getAuth, signInWithPopup,  } from 'firebase/auth';
+import app from '../../Firebase/firebase.config';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 const Login = () => {
-   const handleLogin = event =>{
+  const auth = getAuth(app);
+  // const navigate = useNavigate();
+  const provider = new GoogleAuthProvider();
 
+  
+  const { login } = useContext(AuthContext);
+  const [error, setError] = useState("");
+
+
+   const handleLogin = event =>{
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+
+    if (password.length < 6) {
+      setError("password should be 6 character");
+      return;
+    }
+    // login auth
+    login(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        form.reset();
+        // navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        console.log(errorMessage);
+        setError(errorMessage);
+      });
+ }
+  //  google sign in
+   const handleGoogle = () =>{
+    signInWithPopup(auth, provider)
+    .then((result) => {
+      const loggedUser = result.user;
+      console.log(loggedUser);
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      console.log(errorMessage);
+    });
    }
    return (
       <div className="hero  ">
@@ -48,10 +94,10 @@ const Login = () => {
                   Login
                 </button>
               </div>
-              {/* <p className="text-red-500">{error}</p> */}
+              <p className="text-red-500">{error}</p>
               <p>
                 Don't have an account ?
-                <Link to="register" className="text-yellow-600 font-bold">
+                <Link to="/register" className="text-yellow-600 font-bold">
                   Create an Account
                 </Link>
               </p>
@@ -59,32 +105,22 @@ const Login = () => {
       </div>
       <div className="text-center mb-12">
         <button
-         //  onClick={handleGoogleSignIn}
-          className="btn bg-gradient-to-br from-pink-600  to-purple-600 border-0 mb-5"
+          onClick={handleGoogle}
+          className="btn bg-gradient-to-br from-rose-600  to-yellow-600 border-0 mb-5"
         >
           <FaGoogle />
           <span className="text-black ps-3 font-bold">
             Continue With google
           </span>
         </button>
-        <br />
-        <button
-         //  onClick={handleGithubSignIn}
-          className="btn bg-gradient-to-br from-purple-600  to-pink-600 border-0"
-        >
-          
-          <FaGithub />
-          <span className="text-black ps-3 font-bold">
-            
-            Continue With Github
-          </span>
-        </button>
+        
+        
       </div>
     </div>
   </div>
   
 </div>
    );
-};
 
+   };
 export default Login;

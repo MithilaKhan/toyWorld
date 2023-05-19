@@ -1,13 +1,60 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Navbar = () => {
+
+  const{user , logOut} =useContext(AuthContext)
+   const [showName ,setShowName] = useState(false)
+
+
+   //  signOut 
+const handleLogOut =() =>{
+  logOut()
+.then(() => {
+  })
+.catch((error) => {
+  
+});
+   }
    const navItems = <>
    <li><Link to="/" className='text-xl'>Home</Link></li>
    <li><Link className='text-xl'>All Toys</Link></li>
-    <li><Link className='text-xl'>My Toys</Link></li>
-   <li><Link className='text-xl'>Add A Toy</Link></li>
+   {
+    user&&<li><Link className='text-xl'>My Toys</Link></li>
+   }
+   {
+    user&&<li><Link className='text-xl'>Add A Toy</Link></li>
+   }
    <li><Link to="blogs" className='text-xl'>Blogs</Link></li>
+
+   <li><Link className=" flex items-center gap-6"
+              onMouseEnter={() => setShowName(true)} // Show name on hover
+              onMouseLeave={() => setShowName(false)} // Hide name on mouse leave
+            >
+              <div className=" w-full relative">
+                {user && (
+                  <img className=" w-12 rounded-full" src={user.photoURL} alt="" />
+                )}
+                {showName && user && ( // Only show name when hovering over picture and user exists
+                  <div className="absolute top-0 left-0 bg-white rounded-md py-1 px-2 shadow-md">
+                    {user.displayName}
+                  </div>
+                )}
+              </div>
+              {user ? (
+                <div>
+                  <Link onClick={handleLogOut} variant="secondary">
+                    Logout
+                  </Link>
+                </div>
+              ) : (
+                <Link to="/login">
+                  Login
+                </Link>
+              )}
+            </Link>
+            </li>
    </>
    return (
       <div className="navbar bg-base-100 bg-rose-50 rounded-lg p-5 ">
