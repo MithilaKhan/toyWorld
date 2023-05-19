@@ -12,7 +12,7 @@ const handleAddToy = event =>{
    const toyName =form.toyName.value
    const price =form.price.value
    const quantity=form.quantity.value
-   const photo =user?.photoURL
+   const photo =form.photo.value
    const subCategory =form.subCategory.value
    const rating=form.rating.value
    const description=form.description.value
@@ -87,7 +87,7 @@ const handleAddToy = event =>{
               <label className="label">
                 <span className="label-text">Photo</span>
               </label>
-              <input type="url" name='photo' placeholder="Photo" className="input input-bordered" defaultValue={user?.photoURL}  required/>
+              <input type="url" name='photo' placeholder="Photo" className="input input-bordered"   required/>
              </div>
             </div>
 

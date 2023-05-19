@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const AllToy = () => {
   //  const allToys = useLoaderData()
@@ -57,13 +57,16 @@ const AllToy = () => {
       {/* row 1 */}
      {
       toys.map((toy ,index) => <tr key={toy._id}>
-         <td>{index + 1}</td>
+        {
+          index<20?<td>{index + 1}</td>:<>{index?.slice(0,20)}</>
+        }
+         
          <td>{toy.sellerName}</td>
          <td>{toy.toyName}</td>
          <td>{toy.subCategory}</td>
          <td>{toy.price}</td>
          <td>{toy.quantity}</td>
-         <td><button className='btn bg-gradient-to-br from-yellow-500  to-rose-600 border-0 ps-8 pe-8'>View Details</button></td>
+         <td><Link to={`/viewDetails/${toy._id}`}><button className='btn bg-gradient-to-br from-yellow-500  to-rose-600 border-0 ps-8 pe-8'>View Details</button></Link></td>
        </tr>)
      }
      

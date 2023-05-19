@@ -7,6 +7,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import AddToy from "../Pages/AddToy/AddToy";
 import AllToy from "../Pages/AllToy/AllToy";
+import ViewDetails from "../Shared/VIewDetails/ViewDetails";
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
         path:"/allToy" ,
         element:<AllToy/> 
         
+       },
+       {
+        path:"viewDetails/:id" ,
+        element:<ViewDetails/> ,
+        // loader:({params})=>fetch(`http://localhost:5000/allToy/${params.id}`)
        }
      ],
    },
