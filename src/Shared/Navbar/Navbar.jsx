@@ -19,12 +19,12 @@ const handleLogOut =() =>{
    }
    const navItems = <>
    <li><Link to="/" className='text-xl'>Home</Link></li>
-   <li><Link className='text-xl'>All Toys</Link></li>
+   <li><Link to="/allToy" className='text-xl'>All Toys</Link></li>
    {
     user&&<li><Link className='text-xl'>My Toys</Link></li>
    }
    {
-    user&&<li><Link className='text-xl'>Add A Toy</Link></li>
+    user&&<li><Link to="/addToy" className='text-xl'>Add A Toy</Link></li>
    }
    <li><Link to="blogs" className='text-xl'>Blogs</Link></li>
 
@@ -57,7 +57,7 @@ const handleLogOut =() =>{
             </li>
    </>
    return (
-      <div className="navbar bg-base-100 bg-rose-50 rounded-lg p-5 ">
+      <div className="navbar  bg-rose-100 rounded-lg p-5 ">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
