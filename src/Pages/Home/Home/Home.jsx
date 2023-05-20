@@ -1,6 +1,7 @@
 
 import Gallery from '../../Gallery/Gallery';
 import Reviews from '../../Reviews/Reviews';
+import SubCategories from '../SubCategories/SubCategories';
 import Banner from './Banner/Banner';
 
 
@@ -14,8 +15,12 @@ const Home = () => {
         </div>
        <Gallery/>
 
-       {/* customer review  */}
-       <div className='pt-12'>
+       <div className='mt-12'>
+         <SubCategories/>
+       </div>
+
+        {/* customer review  */}
+        <div className='pt-12'>
        <h1 className='text-center italic text-4xl text-rose-600 font-bold'>Customer Review</h1>
        <Reviews/>
        </div>
