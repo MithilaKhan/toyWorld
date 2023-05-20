@@ -51,7 +51,8 @@ const router = createBrowserRouter([
        },
        {
         path:"/myToys" ,
-        element:<MyToys/>
+        element:<MyToys/> ,
+        
        },
        {
         path:"/updateToy/:id" ,

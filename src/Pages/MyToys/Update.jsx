@@ -44,7 +44,7 @@ const Update = () => {
 <div className="hero min-h-screen bg-rose-50">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:ms-14 lg:text-left w-1/2">
-         <img src="https://www.disneyclips.com/images/images/donaldsunflower.gif" alt="" />
+         <img src="https://img.freepik.com/free-vector/update-concept-illustration_114360-1742.jpg?w=740&t=st=1684570618~exp=1684571218~hmac=1800a44c44647523fc76477a2690986c3fb183ccf938cb2866926f3d878445ae" alt="" />
         </div>
         <div className="card flex-shrink-0 w-1/2  shadow-2xl bg-rose-100">
           <form onSubmit={handleAddToy} className="card-body">
