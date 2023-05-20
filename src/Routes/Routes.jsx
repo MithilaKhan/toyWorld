@@ -10,6 +10,7 @@ import AllToy from "../Pages/AllToy/AllToy";
 import ViewDetails from "../Shared/VIewDetails/ViewDetails";
 import MyToys from "../Pages/MyToys/MyToys";
 import Update from "../Pages/MyToys/Update";
+import PrivateRouter from "./PrivateRouter";
 
 
 const router = createBrowserRouter([
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
        },
        {
         path: "/addToy" ,
-        element:<AddToy/>
+        element:<PrivateRouter><AddToy/></PrivateRouter>
        },
        {
         path:"/allToy" ,
@@ -46,12 +47,12 @@ const router = createBrowserRouter([
        },
        {
         path:"viewDetails/:id" ,
-        element:<ViewDetails/> 
+        element:<PrivateRouter><ViewDetails/></PrivateRouter> 
         
        },
        {
         path:"/myToys" ,
-        element:<MyToys/> ,
+        element:<PrivateRouter><MyToys/></PrivateRouter> ,
         
        },
        {
