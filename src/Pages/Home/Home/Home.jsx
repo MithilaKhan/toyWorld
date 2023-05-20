@@ -15,7 +15,8 @@ const Home = () => {
         </div>
        <Gallery/>
 
-       <div className='mt-12'>
+       <div className='mt-20'>
+       <h1 className='text-center italic p-9 text-4xl text-rose-600 font-bold'> Shop by Category</h1>
          <SubCategories/>
        </div>
 
