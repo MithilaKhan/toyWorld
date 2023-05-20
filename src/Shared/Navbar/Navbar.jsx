@@ -21,7 +21,7 @@ const handleLogOut =() =>{
    <li><Link to="/" className='text-xl'>Home</Link></li>
    <li><Link to="/allToy" className='text-xl'>All Toys</Link></li>
    {
-    user&&<li><Link className='text-xl'>My Toys</Link></li>
+    user&&<li><Link to="/myToys" className='text-xl'>My Toys</Link></li>
    }
    {
     user&&<li><Link to="/addToy" className='text-xl'>Add A Toy</Link></li>

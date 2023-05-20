@@ -8,6 +8,8 @@ import Register from "../Pages/Register/Register";
 import AddToy from "../Pages/AddToy/AddToy";
 import AllToy from "../Pages/AllToy/AllToy";
 import ViewDetails from "../Shared/VIewDetails/ViewDetails";
+import MyToys from "../Pages/MyToys/MyToys";
+import Update from "../Pages/MyToys/Update";
 
 
 const router = createBrowserRouter([
@@ -44,8 +46,17 @@ const router = createBrowserRouter([
        },
        {
         path:"viewDetails/:id" ,
-        element:<ViewDetails/> ,
-        // loader:({params})=>fetch(`http://localhost:5000/allToy/${params.id}`)
+        element:<ViewDetails/> 
+        
+       },
+       {
+        path:"/myToys" ,
+        element:<MyToys/>
+       },
+       {
+        path:"/updateToy/:id" ,
+        element:<Update/> ,
+        loader:({params})=>fetch(`http://localhost:5000/allToy/${params.id}`)
        }
      ],
    },

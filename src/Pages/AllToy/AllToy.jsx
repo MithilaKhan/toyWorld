@@ -5,6 +5,7 @@ const AllToy = () => {
   //  const allToys = useLoaderData()
    const [searchText, setSearchText] = useState("");
    const [toys , setToys] = useState([])
+   const alToys =toys.slice(0 , 20)
    // const toyInfo = {sellerName ,sellerEmail,toyName,price,quantity,photo,subCategory,rating,description}
   //  console.log(allToys);
 
@@ -56,7 +57,7 @@ const AllToy = () => {
     <tbody>
       {/* row 1 */}
      {
-      toys.map((toy ,index) => <tr key={toy._id}>
+      alToys.map((toy ,index) => <tr key={toy._id}>
         {
           index<20?<td>{index + 1}</td>:<>{index?.slice(0,20)}</>
         }
