@@ -11,7 +11,7 @@ const Reviews = () => {
    return (
       <div className='mt-20 grid lg:grid-cols-1 sm:grid-cols-1'>
          <div className="chat chat-start b   h-1/2" >
-   <div className="chat-bubble chat-bubble-error" data-aos="fade-left">
+   <div className="chat-bubble chat-bubble-error" data-aos="zoom-in-up">
     {/* <div className='grid grid-cols-2 '> */}
   <div className="avatar pt-6 flex">
   <div className=" ms-14 w-24 h-24 ">
@@ -38,7 +38,7 @@ const Reviews = () => {
 </div>
 
 <div className="chat chat-end">
-  <div className="chat-bubble chat-bubble-warning" data-aos="fade-right">
+  <div className="chat-bubble chat-bubble-warning" data-aos="zoom-in-down">
   <div className="avatar pt-6 flex">
   <div className=" ms-14 w-24 h-24 ">
     <img src="https://th.bing.com/th/id/OIP.cclxxBMEDhrujI5I44kYPAHaFj?pid=ImgDet&w=700&h=525&rs=1" className=' rounded-full' />
