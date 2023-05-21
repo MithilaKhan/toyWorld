@@ -2,6 +2,7 @@
 import UseTitle from '../../../useTitle';
 import Gallery from '../../Gallery/Gallery';
 import Reviews from '../../Reviews/Reviews';
+import ShopBy from '../ShopBy/ShopBy';
 import SubCategories from '../SubCategories/SubCategories';
 import Banner from './Banner/Banner';
 
@@ -28,7 +29,13 @@ const Home = () => {
        <h1 className='text-center italic text-4xl text-rose-600 font-bold'>Customer Review</h1>
        <Reviews/>
        </div>
-        <h1 className='text-5xl font-bold text-purple-600'>this is home</h1> 
+
+       {/* shop By Bands  */}
+       <div className='mt-20'>
+       <h1 className='text-center italic p-9 text-4xl text-rose-600 font-bold'> Shop by Bands</h1>
+       <ShopBy/>
+       </div>
+       
       
       </div>
    );

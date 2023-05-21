@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import UseTitle from '../../useTitle';
-
+import Swal from 'sweetalert2';
 const Update = () => {
    const toyInfos = useLoaderData()
    const {user} = useContext(AuthContext)
@@ -37,6 +37,14 @@ const Update = () => {
       .then(res =>res.json())
       .then(data =>{
          console.log(data);
+         if(data.modifiedCount > 0){
+          Swal.fire({
+            
+            text: 'Are you want to update ? ',
+            icon: 'Success',
+            confirmButtonText: 'yes'
+          })
+         }
         
       })
    } 
@@ -128,7 +136,7 @@ const Update = () => {
              </div>
             
             <div className="form-control mt-6">
-              <button className="btn bg-gradient-to-br from-yellow-500  to-rose-600 border-0 ps-8 pe-8 font-bold">Post</button>
+              <button className="btn bg-gradient-to-br from-yellow-500  to-rose-600 border-0 ps-8 pe-8 font-bold">Updated</button>
             </div>
           </form>
         </div>
