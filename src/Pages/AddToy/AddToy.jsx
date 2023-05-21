@@ -38,7 +38,7 @@ const handleAddToy = event =>{
           title: 'ADD',
           text: 'Your Toy Added Successfully',
           icon: 'Success',
-          confirmButtonText: 'Cool'
+          confirmButtonText: 'OK'
         })
       }
    })
