@@ -51,7 +51,7 @@ const handleAddToy = event =>{
 <div className="hero min-h-screen bg-rose-50">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:ms-14 lg:text-left w-1/2">
-         <img src="https://www.disneyclips.com/images/images/donaldsunflower.gif" alt="" />
+         <img src="https://img.freepik.com/free-vector/launching-concept-illustration_114360-1731.jpg?w=740&t=st=1684688562~exp=1684689162~hmac=d96b14a51688fc6261f17fd370c7ede88f3a59388dbc87e264c6340b4d049182" alt="" />
         </div>
         <div className="card flex-shrink-0 w-1/2  shadow-2xl bg-rose-100">
           <form onSubmit={handleAddToy} className="card-body">
