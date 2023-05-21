@@ -9,7 +9,7 @@ const Reviews = () => {
    } ,[])
 
    return (
-      <div className='mt-20'>
+      <div className='mt-20 grid lg:grid-cols-1 sm:grid-cols-1'>
          <div className="chat chat-start b   h-1/2" >
    <div className="chat-bubble chat-bubble-error" data-aos="fade-left">
     {/* <div className='grid grid-cols-2 '> */}
@@ -18,7 +18,7 @@ const Reviews = () => {
     <img src="https://th.bing.com/th/id/OIP.XSZAFm-5JI7nriDLwZqRQQHaE7?pid=ImgDet&rs=1" className=' rounded-full' />
    </div>
    <div className='pt-8 ps-5'>
- <h1>mrs.Afsana Chowdury</h1>
+ <h1>Mr. Mahfuj Khan </h1>
    <p className='text-yellow-400 flex'>
       <FaStar/>
       <FaStar/>
@@ -44,7 +44,7 @@ const Reviews = () => {
     <img src="https://th.bing.com/th/id/OIP.cclxxBMEDhrujI5I44kYPAHaFj?pid=ImgDet&w=700&h=525&rs=1" className=' rounded-full' />
    </div>
    <div className='pt-8 ps-5'>
- <h1>Mr. Mahfuj Khan</h1>
+ <h1> mrs.Afsana Chowdury</h1>
    <p className='text-rose-700 flex'>
       <FaStar/>
       <FaStar/>

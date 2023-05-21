@@ -12,7 +12,7 @@ const MyToys = () => {
    UseTitle("My Toy")
 
    useEffect(()=>{
-      fetch(`http://localhost:5000/myToys?sellerEmail=${user?.email}`)
+      fetch(`https://toy-marketplace-server-side-rho.vercel.app/myToys?sellerEmail=${user?.email}`)
       .then(res =>res.json())
       .then(data =>{
          console.log(data);
@@ -31,7 +31,7 @@ const MyToys = () => {
          confirmButtonText: 'Yes, delete it!'
        }).then((result) => {
          if (result.isConfirmed) {
-            fetch(`http://localhost:5000/allToy/${id}` ,{
+            fetch(`https://toy-marketplace-server-side-rho.vercel.app/allToy/${id}` ,{
          method:"DELETE"
        })
        .then(res => res.json())
@@ -52,7 +52,7 @@ const MyToys = () => {
    }
 
 const handleAscending =()=>{
-   fetch(`http://localhost:5000/toys/${user.email}/lowPrice`)
+   fetch(`https://toy-marketplace-server-side-rho.vercel.app/toys/${user.email}/lowPrice`)
    .then(res => res.json())
    .then(data =>{
       console.log(data);
@@ -61,7 +61,7 @@ const handleAscending =()=>{
 }
 
 const handleDeAscending=()=>{
-   fetch(`http://localhost:5000/toys/${user.email}/highPrice`)
+   fetch(`https://toy-marketplace-server-side-rho.vercel.app/toys/${user.email}/highPrice`)
    .then(res => res.json())
    .then(data =>{
       console.log(data);

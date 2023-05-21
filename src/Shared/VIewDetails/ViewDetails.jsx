@@ -11,7 +11,7 @@ const ViewDetails = () => {
    UseTitle("View Details")
 
    useEffect(()=>{
-    fetch(`http://localhost:5000/allToy/${id}`)
+    fetch(`https://toy-marketplace-server-side-rho.vercel.app/allToy/${id}`)
     .then(res => res.json())
     .then(data=>{
       console.log(data);

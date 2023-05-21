@@ -6,7 +6,7 @@ const Banner = () => {
 
       {/* title */}
       <div className='grid text-5xl text-center lg:my-auto lg:gap-y-6'>
-      <h1 className='   font-bold text-rose-500 pt-6 '> " WE </h1>
+      <h1 className='   font-bold text-rose-500 lg:pt-6 '> " WE </h1>
       <p className=' text-yellow-500    font-bold'>Distribute Toys to</p>
       <p className= "font-bold  text-rose-600">Your Home "</p> 
       </div>

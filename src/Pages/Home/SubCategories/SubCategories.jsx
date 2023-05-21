@@ -13,7 +13,7 @@ const SubCategories = () => {
 
    // {sellerName ,sellerEmail,toyName,price,quantity,photo,subCategory,rating,description}
    useEffect(()=>{
-      fetch("http://localhost:5000/addToy?subCategory=Frozen")
+      fetch("https://toy-marketplace-server-side-rho.vercel.app/addToy?subCategory=Frozen")
       .then(res => res.json())
       .then(data => {
         //  console.log(data);
@@ -22,7 +22,7 @@ const SubCategories = () => {
    } , [])
    
    useEffect(()=>{
-      fetch("http://localhost:5000/addToy?subCategory=donald duck")
+      fetch("https://toy-marketplace-server-side-rho.vercel.app/addToy?subCategory=donald duck")
       .then(res => res.json())
       .then(data => {
         //  console.log(data);
@@ -31,7 +31,7 @@ const SubCategories = () => {
    } , [])
 
    useEffect(()=>{
-      fetch("http://localhost:5000/addToy?subCategory=Disney")
+      fetch("https://toy-marketplace-server-side-rho.vercel.app/addToy?subCategory=Disney")
       .then(res => res.json())
       .then(data => {
         //  console.log(data);

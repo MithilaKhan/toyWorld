@@ -23,7 +23,7 @@ const handleAddToy = event =>{
    const toyInfo = {sellerName ,sellerEmail,toyName,price,quantity,photo,subCategory,rating,description}
    console.log(toyInfo);
 
-   fetch("http://localhost:5000/addToy" , {
+   fetch("https://toy-marketplace-server-side-rho.vercel.app/addToy" , {
             method:"POST" ,
             headers:{
                "content-type":"application/json"

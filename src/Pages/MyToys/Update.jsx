@@ -27,7 +27,7 @@ const Update = () => {
          const toyInfo = {sellerName ,sellerEmail,toyName,price,quantity,photo,subCategory,rating,description}
          console.log(toyInfo);
 
-      fetch(`http://localhost:5000/allToy/${_id}` ,{
+      fetch(`https://toy-marketplace-server-side-rho.vercel.app/allToy/${_id}` ,{
          method:"PUT" ,
          headers:{
             "content-type" : "application/json"
