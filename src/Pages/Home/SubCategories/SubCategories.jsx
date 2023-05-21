@@ -55,12 +55,13 @@ const handleViewDetails =()=>{
       <Tabs>
     <TabList className="text-center text-2xl text-yellow-600 font-semibold">
       <Tab>Frozen</Tab>
-      <Tab>Disney</Tab>
+     
       <Tab>Donald Duck</Tab>
+      <Tab>Disney</Tab>
     </TabList>
 
     <TabPanel>
-     <div className='grid lg:grid-cols-3 lg:mt-6 gap-4 justify-items-center'>
+     <div className='grid lg:grid-cols-3 sm:grid-cols-1 lg:mt-6 gap-4 justify-items-center'>
      {
       frozen.map(froz=><div key={froz._id} className="card w-3/4 h-3/4 bg-base-100 p-5 shadow-2xl">
       <figure><img src={froz.photo} className='w-full h-full' alt="Shoes" /></figure>
@@ -87,10 +88,10 @@ const handleViewDetails =()=>{
 
 
     <TabPanel>
-    <div className='grid lg:grid-cols-3 gap-4 justify-items-center'>
+    <div className='grid lg:grid-cols-3 sm:grid-cols-1 gap-4 justify-items-center'>
      {
-      donalduck.map(donal=><div key={donal._id} className="card w-96 bg-base-100 shadow-2xl">
-      <figure><img src={donal.photo} alt="Shoes" /></figure>
+      donalduck.map(donal=><div key={donal._id} className="card w-3/4 h-3/4  bg-base-100 shadow-2xl">
+      <figure><img src={donal.photo} alt="Shoes" className='w-full h-full' /></figure>
       <div className="card-body">
         <h2 className="card-title">
           Name :{donal.toyName}
@@ -112,10 +113,10 @@ const handleViewDetails =()=>{
 
 
     <TabPanel>
-    <div className='grid lg:grid-cols-3 gap-4 justify-items-center'>
+    <div className='grid lg:grid-cols-3 sm:grid-cols-1 mt-14 gap-4 justify-items-center'>
      {
-      disney.map(disne=><div key={disne._id} className="card w-96 bg-base-100 shadow-2xl">
-      <figure><img src={disne.photo} alt="Shoes" /></figure>
+      disney.map(disne=><div key={disne._id} className="card  w-3/4 h-3/4 bg-base-100 shadow-2xl">
+      <figure><img src={disne.photo} alt="Shoes" className='w-full h-full'/></figure>
       <div className="card-body">
         <h2 className="card-title">
           Name :{disne.toyName}
@@ -125,7 +126,7 @@ const handleViewDetails =()=>{
         <p>Rating :{disne.rating} </p>
         <div className="card-actions justify-end">
           <div >
-            if
+         
           <Link to={`/viewDetails/${disne._id}`}><button onClick={handleViewDetails} className='btn bg-gradient-to-br from-yellow-500  to-rose-600 border-0 ps-8 pe-8'>View Details</button></Link>
           </div>
           

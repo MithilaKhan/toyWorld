@@ -2,11 +2,14 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import UseTitle from '../../useTitle';
 
 const MyToys = () => {
    
    const {user} = useContext(AuthContext)
    const [toys, setToys] = useState([])
+
+   UseTitle("My Toy")
 
    useEffect(()=>{
       fetch(`http://localhost:5000/myToys?sellerEmail=${user?.email}`)
@@ -47,9 +50,33 @@ const MyToys = () => {
        })
        
    }
+
+const handleAscending =()=>{
+   fetch(`http://localhost:5000/toys/${user.email}/lowPrice`)
+   .then(res => res.json())
+   .then(data =>{
+      console.log(data);
+      setToys(data)
+   })
+}
+
+const handleDeAscending=()=>{
+   fetch(`http://localhost:5000/toys/${user.email}/highPrice`)
+   .then(res => res.json())
+   .then(data =>{
+      console.log(data);
+      setToys(data)
+   })
+}
+
+
    return (
       <div>
-         <div className="overflow-x-auto  p-20  pt-0">
+         <div className='lg:ms-96 m-16 mb-0'>
+         <button onClick={handleAscending} className='btn bg-gradient-to-br from-yellow-500  to-rose-600 border-0 ps-8 pe-8 me-6 '>Low Price</button>
+         <button onClick={handleDeAscending} className='btn bg-gradient-to-br from-yellow-500  to-rose-600 border-0 ps-8 pe-8'>High Price</button>
+         </div>
+         <div className="overflow-x-auto  p-20  pt-16">
   <table className="table  w-full">
     {/* head */}
     <thead>

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import UseTitle from '../../useTitle';
 
 const AllToy = () => {
-  //  const allToys = useLoaderData()
+  
    const [searchText, setSearchText] = useState("");
    const [toys , setToys] = useState([])
    const alToys =toys.slice(0 , 20)
-   // const toyInfo = {sellerName ,sellerEmail,toyName,price,quantity,photo,subCategory,rating,description}
-  //  console.log(allToys);
+   
+   UseTitle("All Toy")
 
   useEffect(()=>{
     fetch("http://localhost:5000/addToy")

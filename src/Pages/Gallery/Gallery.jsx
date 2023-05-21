@@ -35,7 +35,7 @@ const Gallery = () => {
          <div className="card card-compact h-80  w-full bg-base-100 shadow-xl" data-aos="fade-left">
   <figure className=" " ><img src="https://th.bing.com/th/id/R.a0fe5d55440bab9eaca973344396e22d?rik=EGvpcA6Aisqp1Q&riu=http%3a%2f%2fcdn.shopify.com%2fs%2ffiles%2f1%2f0802%2f7197%2fproducts%2fFigma_308_Elsa_from_Frozen-4_grande.jpg%3fv%3d1468315165&ehk=pvVkHfBeLqrj5o040SvfOlZpn%2fUUR7Q2CMTTXPKuMg8%3d&risl=&pid=ImgRaw&r=0" alt="Shoes" className='h-full w-full' /></figure>
   <div className="card-body">
-    <h2 className="card-title">Sleeping Beauty</h2>
+    <h2 className="card-title">Anna</h2>
       </div>
       </div>
          {/* img 5 */}

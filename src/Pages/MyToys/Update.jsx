@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import UseTitle from '../../useTitle';
 
 const Update = () => {
    const toyInfos = useLoaderData()
    const {user} = useContext(AuthContext)
+
+   UseTitle("Update")
 
    const  {_id ,sellerName ,sellerEmail,toyName,price,quantity,photo,subCategory,rating,description} = toyInfos
     

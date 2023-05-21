@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import Pdf from "react-to-pdf";
+import UseTitle from '../../useTitle';
 
 const ref = React.createRef();
 const Blogs = () => {
+
+   UseTitle("Blog")
    return (
 
       <div>
